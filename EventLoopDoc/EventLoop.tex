@@ -18,3 +18,10 @@ The event loop continuously checks the call stack.If the call stack is empty, th
 
 % 5.Event Loop
    Continuously checks if the call stack is empty and pushes tasks from the microtask queue or task queue to the call stack for execution.
+
+
+% Summary
+The event loop manages asynchronous tasks in a single-threaded model.
+Concurrency is about managing multiple tasks at once, even if not simultaneously.
+Parallelism is about doing multiple things exactly at the same time using multiple threads/cores.
+Event loops support concurrency, but not true parallelism, unless combined with worker threads or child processes.
