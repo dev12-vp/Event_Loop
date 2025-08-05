@@ -1,0 +1,20 @@
+JavaScript is single-threaded, it uses the event loop to manage the execution of multiple tasks without blocking the main thread.
+
+% How to Event loop works
+
+The event loop continuously checks the call stack.If the call stack is empty, the event loop takes the first task from the microtask queue or callback queue and pushes it onto the call stack for execution.
+
+% 1.Call stack
+  Keeps track of function calls. When a function is invoked, it is pushed onto the stack. When the function finishes execution, it is popped off.
+
+% 2.Web API
+  Provides browser features like setTimeout, DOM events, and HTTP requests. These APIs handle asynchronous operations.
+
+% 3.Callback Queue
+  Stores tasks waiting to be executed after the call stack is empty. These tasks are queued by setTimeout, setInterval, or other APIs.
+
+% 4.Microtask Queue
+   A higher-priority queue for promises and MutationObserver callbacks. Microtasks are executed before tasks in the task queue.
+
+% 5.Event Loop
+   Continuously checks if the call stack is empty and pushes tasks from the microtask queue or task queue to the call stack for execution.
